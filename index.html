@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Test</title>
+</head>
+<body>
+
+  <div class="wrapper container">
+
+    <section class="sidbar">
+      <div class="sidbar-nav">
+        <h3 class="sidbar-nav-text">Меню</h3>
+        <ul class="sidbar-nav-list">
+          <li class="sidbar-nav-item">
+            <a href="#" class="sidbar-nav-link">Пункт 1</a>
+          </li>
+          <li class="sidbar-nav-item">
+            <a href="#" class="sidbar-nav-link">Пункт 2</a>
+          </li>
+          <li class="sidbar-nav-item">
+            <a href="#" class="sidbar-nav-link">Пункт 3</a>
+          </li>
+          <li class="sidbar-nav-item">
+            <a href="#" class="sidbar-nav-link">Пункт 4</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="header">
+        <form class="form">
+          <input id="search" placeholder="Поиск ..." type="text">
+          <input value="Поиск" id="submitBtn" type="submit">
+        </form>
+      </header>
+
+      <main class="main">
+
+        <section class="table">
+
+          <div class="table-header">
+            <p class="table-header-name title-text">ФИО</p>
+            <p class="table-header-position title-text">Должность</p>
+            <p class="table-header-age title-text">Возраст</p>
+            <p class="table-header-competencies title-text">Компетенции</p>
+            <p class="table-header-empty title-text"></p>
+          </div>
+          
+          <form id="form" name='employees' onsubmit="submitForm(); return false">
+            <fieldset class="table-row">
+              <div class="input-name input-block">
+                <input class="input" type="text" name="name" placeholder="ФИО" required>
+              </div>
+              <div class="input-position input-block">
+                <input class="input" type="text" name="position" placeholder="Должность" required>
+              </div>
+              <div class="input-age input-block">
+                <input class="input" type="number" name="age" placeholder="Возраст" required min="1" max="120" pattern="\d+">
+              </div>
+              <div class="input-competencies input-block">
+                <textarea class="input" placeholder="Компетенции" name="competencies"></textarea>
+              </div>
+              <div class="input-block input-block-btn">
+                <button class="delete"></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="new"></fieldset>
+            
+            <div class="table-button">
+              <button id="submit" class="btn" type="submit">Отправить</button>
+              <button id="add" class="btn">Добавить</button>
+            </div>
+
+          </form>
+
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p>© TEST, 1022–2022</p>
+      </footer>
+
+    </section> <!-- /.page -->
+
+  </div> <!-- /.wrapper -->
+  
+  <script src="app.js"></script>
+</body>
+</html>
